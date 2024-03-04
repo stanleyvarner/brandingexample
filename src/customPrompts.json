@@ -1,0 +1,9 @@
+// endpoint https://auth-demo-lab.us.auth0.com/api/v2/prompts/signup-id/partials
+
+{
+  "signup-id": {
+    "form-content-start": "<div class=\"ulp-field\">\n  <label for=\"first-name\">First Name</label>\n  <input type=\"text\" name=\"ulp-first-name\" id=\"first-name\">\n</div>\n<div class=\"ulp-field\">\n  <label for=\"last-name\">Last Name</label>\n  <input type=\"text\" name=\"ulp-last-name\" id=\"last-name\">\n</div>",
+    "form-content-end": "<script>\n    function validateSelectFunction(element, formSubmitted) {\n        if (!formSubmitted) {\n            return true;\n        }\n        return !!element.checked;\n    }\n</script> <div class=\"ulp-field\">\n    <input type=\"checkbox\" name=\"ulp-terms-of-service\" id=\"terms-of-service\">\n   <label for=\"terms-of-service\">I agree to the <a href=\"https://auth0.com/web-terms\" target=\"_blank\">Terms\n            of Service</a></label>\n    <div class=\"ulp-error-info\" data-ulp-validation-function=\"validateSelectFunction\" data-ulp-validation-event-listeners=\"blur,change,input,focus\">Please agree to the Terms of Service.</div>\n</div>"
+  }
+
+}
