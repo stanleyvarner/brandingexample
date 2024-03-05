@@ -21,3 +21,4 @@ export function getConfig() {
     ...(additonalparams ? {additonalparams } : {}),
   };
 }
+
