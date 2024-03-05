@@ -8,17 +8,16 @@ export function getConfig() {
   // If this resolves to `null`, the API page changes to show some helpful info about what to do
   // with the audience.
   const audience =
-    process.env.audience && process.env.audience !== "YOUR_API_IDENTIFIER"
-      ? process.env.audience
+    configJson.audience && configJson.audience !== "YOUR_API_IDENTIFIER"
+      ? configJson.audience
       : null;
   
-  const additonalparams = process.env.additonalparams || null;
+  const additonalparams = configJson.additonalparams || null;
 
   return {
-    domain: process.env.domain,
-    clientId: process.env.clientId,
+    domain: configJson.domain,
+    clientId: configJson.clientId,
     ...(audience ? { audience } : null),
     ...(additonalparams ? {additonalparams } : {}),
   };
 }
-
